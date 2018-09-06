@@ -1,0 +1,50 @@
+{
+    "name": "hclfmt",
+    "displayName": "hclfmt",
+    "description": "Autoformat hcl files",
+    "version": "0.0.1",
+    "publisher": "sourcepirate",
+    "engines": {
+        "vscode": "^1.26.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.hclfmt"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": {
+			"type": "object",
+			"title": "HCLFMT configuration",
+			"properties": {
+				"hclfmt.path": {
+					"type": "string",
+					"default": null,
+					"description": "Specify the path to the racer executable."
+				}
+			}
+		},
+        "commands": [
+            {
+                "command": "extension.hclfmt",
+                "title": "Format HCL"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "tslint": "^5.8.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    }
+}
