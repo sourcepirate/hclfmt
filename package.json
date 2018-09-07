@@ -16,16 +16,16 @@
     "main": "./out/extension",
     "contributes": {
         "configuration": {
-			"type": "object",
-			"title": "HCLFMT configuration",
-			"properties": {
-				"hclfmt.path": {
-					"type": "string",
-					"default": null,
-					"description": "Specify the path to the racer executable."
-				}
-			}
-		},
+            "type": "object",
+            "title": "HCLFMT configuration",
+            "properties": {
+                "hclfmt.path": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Specify the path to the racer executable."
+                }
+            }
+        },
         "commands": [
             {
                 "command": "extension.hclfmt",
