@@ -11,7 +11,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.hclfmt"
+        "onCommand:extension.hclfmt",
+        "onCommand:extension.executeOnSave"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -30,6 +31,10 @@
             {
                 "command": "extension.hclfmt",
                 "title": "Format HCL"
+            },
+            {
+                "command": "extension.executeOnSave",
+                "title": "Enable HCL Formatter"
             }
         ]
     },
