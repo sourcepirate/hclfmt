@@ -2,7 +2,7 @@
     "name": "hclfmt",
     "displayName": "hclfmt",
     "description": "Autoformat hcl files",
-    "version": "0.0.1",
+    "version": "1.0.0-beta",
     "publisher": "sourcepirate",
     "engines": {
         "vscode": "^1.26.0"

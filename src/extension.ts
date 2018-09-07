@@ -24,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // apply the format operation on save event.
     let saveDisposer = vscode.commands.registerCommand('extension.executeOnSave', () => {
-        const onSave = vscode.workspace.onDidSaveTextDocument((doc: vscode.TextDocument) => {
+        vscode.workspace.onDidSaveTextDocument((doc: vscode.TextDocument) => {
             let fileName = doc.fileName;
             client.formatFile(fileName).then((success) => {
                 vscode.window.showInformationMessage("Format Success!!");
