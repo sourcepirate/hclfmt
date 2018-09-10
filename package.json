@@ -2,7 +2,7 @@
     "name": "hclfmt",
     "displayName": "hclfmt",
     "description": "Autoformat hcl files",
-    "version": "1.0.0-beta",
+    "version": "1.0.0",
     "publisher": "sourcepirate",
     "engines": {
         "vscode": "^1.26.0"
@@ -11,8 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.hclfmt",
-        "onCommand:extension.executeOnSave"
+        "onCommand:extension.hclfmt"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -31,10 +30,6 @@
             {
                 "command": "extension.hclfmt",
                 "title": "Format HCL"
-            },
-            {
-                "command": "extension.executeOnSave",
-                "title": "Enable HCL Formatter"
             }
         ]
     },
