@@ -10,7 +10,7 @@ function runFormat(binaryPath: string, path: string): Promise<Number> {
     let process = cp.spawn(binaryPath, ["-w", path]);
     return new Promise((resolve, reject) => {
         process.on('close', (code: Number) => {
-            if(code != 0){
+            if (code !== 0) {
                 reject(code);
             } else {
                 resolve(code);
@@ -32,7 +32,7 @@ export class HclClient {
         console.log(this.hclPath);
     }
 
-    formatFile(path: string) : Promise<Number> {
-       return runFormat(this.hclPath, path);
+    formatFile(path: string): Promise<Number> {
+        return runFormat(this.hclPath, path);
     }
 }
